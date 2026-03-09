@@ -9,3 +9,42 @@ sources:
         identifier: raw_charts
       - name: music_type
         identifier: raw_spotify_data
+models:
+ - name: stg_spotify__charts
+   description: contient par titre le classement, la date, l'artiste, le pays, le chart, le nb de streams (26 millions de lignes)
+   columns: # documentation - il n'est pas nécessaire d'indiquer toutes les colonnes surtout si elles sont bien normées
+   - name: title #STR
+     tests:
+      - not_null
+   - name: rank #INT
+   - name: date #DATE   
+   - name: artist #STR
+   - name: url #STR colonne à utiliser pour extraire le track ID
+   - name: region #STR 70 pays
+   - name: chart #STR viral50 ou top200
+   - name: trend #STR
+   - name: streams #INT
+ - name: stg_spotify__music_type
+   description: contient pour chaque titre (track id), l'album, la popularité, la durée, la date de sortie et les indicateurs spotify (danceability...)
+   columns: 
+   - name: track_id #STR
+     tests:
+      - not_null
+   - name: album #STR
+   - name: popularity #INT   
+   - name: duration_ms #INT
+   - name: explicit #BOOL 1 = explicit, 0 = not explicited ou on ne sait pas
+   - name: release_date #STR
+   - name: available_markets #STR
+   - name: af_danceability #FLOAT
+   - name: af_energy #FLOAT
+   - name: af_key #INT
+   - name: af_loudness #FLOAT
+   - name: af_mode #INT
+   - name: af_speechiness #FLOAT
+   - name: af_acousticness #FLOAT
+   - name: af_instrumentalness #FLOAT
+   - name: af_liveness #FLOAT
+   - name: af_valence #FLOAT
+   - name: af_tempo #FLOAT
+   - name: af_time_signature #INT
