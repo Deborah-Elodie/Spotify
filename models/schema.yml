@@ -9,6 +9,8 @@ sources:
         identifier: raw_charts
       - name: music_type
         identifier: raw_spotify_data
+      - name: genres
+        identifier: raw_genres
 models:
  - name: stg_spotify__charts
    description: contient par titre le classement, la date, l'artiste, le pays, le chart, le nb de streams (26 millions de lignes)
@@ -42,6 +44,10 @@ models:
    - name: af_instrumentalness #FLOAT
    - name: af_valence #FLOAT
    - name: af_tempo #FLOAT
+ - name: stg_spotify__genres
+   description: table complementaire pour recupérer le genre musical
+   columns: 
+   - name: artist_genres
  - name: int_spotify__charts
    description: table intermédiaire qui contient le track id créé à partir de la colonne url
    columns: 
@@ -58,3 +64,4 @@ models:
    - name: duration_segment #STR radio friendly ou long play
    - name: Potentiel_Viral #STR Viral hits, popular tracks ou Niche tracks
    - name: Energy_Vibe #STR Happy & Energetic, Balanced ou Melancholy & Chill
+  
