@@ -52,3 +52,9 @@ models:
    description: table intermédiaire qui fait la jointure entre les tables int_spotify__charts et int_spotify__music_type
    columns: 
    - name: region #STR région du monde pour regrouper les pays
+ - name: int_spotify__main_kpi
+   description: table intermédiaire qui contient les calculs potentiel viral, energy vibe et duration segment
+   columns: 
+   - name: duration_segment #STR radio friendly ou long play
+   - name: Potentiel_Viral #STR Viral hits, popular tracks ou Niche tracks
+   - name: Energy_Vibe #STR Happy & Energetic, Balanced ou Melancholy & Chill
