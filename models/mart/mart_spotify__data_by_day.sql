@@ -27,8 +27,8 @@ SELECT
     ,a.af_valence
     ,a.af_tempo
     ,a.cat_genre
-    ,b.Potentiel_Viral
-    ,b.Energy_Vibe
+    ,b.potentiel_viral
+    ,b.energy_vibe
     ,b.duration_segment
 FROM {{ref('int_spotify__genres_full')}} AS a
 INNER JOIN {{ref('int_spotify__main_kpi')}} AS b

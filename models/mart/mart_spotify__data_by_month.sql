@@ -1,13 +1,16 @@
 {{ config(materialized='table') }}
 Select
-    count(distinct artist) as nb_artist
+    FORMAT_DATE('%Y-%m', date_date) AS year_month
+    ,region
+    ,country
+    ,cat_genre
+    ,potentiel_viral
+    ,energy_vibe
+    ,duration_segment
+    ,count(distinct artist) as nb_artist
     ,count(distinct title) as nb_title
     ,count(distinct album) as nb_album
     ,sum(streams) as total_streams
-    ,extract(year from date_date) as date_year
-    ,extract(month from date_date) as date_month
-    ,country
-    ,region
     ,sum(popularity) as popularity
     ,sum(case 
     when is_explicit=True then 1 else 0 end) as nb_is_explicit
@@ -20,15 +23,12 @@ Select
     ,sum(af_instrumentalness) as sum_intrumentalness
     ,sum(af_valence) as sum_valence
     ,sum(af_tempo) as sum_tempo
-    ,cat_genre
-    ,Potentiel_Viral
-    ,Energy_Vibe
-    ,duration_segment
 FROM {{ ref('mart_spotify__data_by_day') }}
-group by date_year, date_month
+group by year_month
     ,country
     ,region
-    ,cat_genre
-    ,Potentiel_Viral
-    ,Energy_Vibe
+    ,cat_genre 
+    ,potentiel_viral
+    ,energy_vibe
     ,duration_segment
+    order by year_month
