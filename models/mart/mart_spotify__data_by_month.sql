@@ -1,8 +1,8 @@
 {{ config(materialized='table') }}
 Select
-    count(artist) as nb_artist
-    ,count(title) as nb_title
-    ,count(album) as nb_album
+    count(distinct artist) as nb_artist
+    ,count(distinct title) as nb_title
+    ,count(distinct album) as nb_album
     ,sum(streams) as total_streams
     ,extract(year from date_date) as date_year
     ,extract(month from date_date) as date_month
