@@ -100,3 +100,5 @@ models:
    description: agrégation par region, country, cat_genre, potentiel_viral, energy_vibe, duration_segment
    columns: 
    - name: viral10 #WHEN ranking <= 10 THEN 1 ELSE 0
+ - name: mart_spotify__top200_france
+   description: top200 avec filtre country = france
