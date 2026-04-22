@@ -15,7 +15,8 @@ By analyzing the Top 200 and Viral 50 global playlists, we identified key succes
 
 🏗 Data Pipeline & Methodology
 
-1. Dual-Level Analysis: Artist & Track Performance
+1. **Dual-Level Analysis: Artist & Track Performance**
+ 
 To provide a 360° view for the editorial team, we focused our analysis on two levels:
 * **Flagship Artists:** Identifying consistent hit-makers and market leaders in Europe to secure the backbone of playlists.
 * **Flagship Tracks:** Detecting "breakout" songs and viral hits, regardless of the artist's previous fame, to ensure playlists stay fresh and trend-driven.
