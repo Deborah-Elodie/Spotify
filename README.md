@@ -37,4 +37,6 @@ We developed several KPIs to measure track performance, such as:
 📊 Visualization
 The final Looker Studio dashboard provides the Editorial Team with a clear view of which tracks and genres should be prioritized for next year's flagship playlists.
 
+![Spotify Dashboard](spotifydashboard.PNG)
+
 
