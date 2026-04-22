@@ -1,6 +1,7 @@
 🎧 Spotify Editorial Strategy – Europe & France Focus
 
 📌 Project Overview
+
 The goal of this project was to provide data-driven insights to the Spotify Editorial Team to assist in playlist curation for the upcoming year. 
 By analyzing the Top 200 and Viral 50 global playlists, we identified key success drivers with a specific focus on the European and French markets.
 
@@ -10,6 +11,7 @@ By analyzing the Top 200 and Viral 50 global playlists, we identified key succes
 * **Transformation:** dbt (Data Build Tool).
 * **Data Processing:** Python (used specifically for complex music genre mapping).
 * **Visualization:** Looker Studio.
+
 
 🏗 Data Pipeline & Methodology
 
@@ -34,7 +36,9 @@ We developed several KPIs to measure track performance, such as:
 * **Regional Genre Penetration:** Identifying which genres are trending specifically in France compared to the rest of Europe.
 * **Artist Longevity:** Measuring how long tracks stay in the charts.
 
+
 📊 Visualization
+
 The final Looker Studio dashboard provides the Editorial Team with a clear view of which tracks and genres should be prioritized for next year's flagship playlists.
 
 ![Spotify Dashboard](spotifydashboard.PNG)
